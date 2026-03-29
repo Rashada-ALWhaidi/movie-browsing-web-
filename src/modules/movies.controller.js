@@ -1,5 +1,5 @@
 
-import * as movieService from './movieService.js';
+import * as movieService from './movies.service.js';
 
  
 export const getAllMovies = (req, res) => {

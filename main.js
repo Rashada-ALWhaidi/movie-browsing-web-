@@ -1,13 +1,12 @@
 import http from 'http';
-
+import router from './src/modules/movies.router.js'; 
 
 const PORT = 3000;
 
 const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ message: 'HELLO' }));
+    router(req, res);
 });
 
 server.listen(PORT, () => {
-    console.log(`Server running on port :${PORT}`);
+    console.log(`Server running on port:${PORT}`);
 });
